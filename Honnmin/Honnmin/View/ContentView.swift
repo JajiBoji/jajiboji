@@ -15,7 +15,8 @@ import Combine
 
 
 
-let betweenUnderscores = try! NSRegularExpression(pattern: "출력한다", options: []) //try는 왜 하는가, NSRegular... 은 뭐하는 건가, options가 비어있는건 옵션이 없는 건가 -> 이건 몰라, 저게 색 칠해주는 라이브러리 그대로 
+let betweenUnderscores = try! NSRegularExpression(pattern: "출력한다", options: []) //try는 왜 하는가, NSRegular... 은 뭐하는 건가, options가 비어있는건 옵션이 없는 건가 -> 색 칠해주는 라이브러리 그대로 
+
 
 let betweenUnderscores2 = try! NSRegularExpression(pattern: "더하기", options: [])
 let betweenUnderscores3 = try! NSRegularExpression(pattern: "곱하기", options: [])
@@ -95,7 +96,7 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
     @FetchRequest(entity: Dfunc.entity(), sortDescriptors: [])
-    var FD : FetchedResults<Dfunc> //함수 불러오는 코드인가 -> 그렇다고 보면 편할거 같은데, 이건 
+    var FD : FetchedResults<Dfunc> //함수 불러오는 코드인가 -> 그렇다고 보면 편할거 같은데, 이건 나중에 따로 
     
     
     
@@ -236,7 +237,7 @@ struct ContentView: View {
     
     
     
-    var body: some View { //some 은 뭔가
+    var body: some View { //some 은 뭔가 -> 그냥 문법인데, 저렇게 쓰면 저 body라는 값 안에는 View가 되기 위한 요소들이 포함되어야함. 보통 뷰 정의할때 저렇게 
         
         
         if UIDevice.current.userInterfaceIdiom == .pad{
